@@ -60,8 +60,9 @@ const Post = ({ post, setCurrentId }) => {
       >
         <CardMedia className={classes.media} image={post.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} title={post.title} />
         <div className={classes.overlay}>
-          <Typography variant="h6">{post.name}</Typography>
-          <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
+          <Typography variant="h6">{post.title}</Typography>
+          <Typography variant="h8">{post.year}</Typography>
+          <Typography variant="subtitle1">{moment(post.createdAt).fromNow()}</Typography>
         </div>
         {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
         <div className={classes.overlay2} name="edit">
@@ -80,7 +81,9 @@ const Post = ({ post, setCurrentId }) => {
         <div className={classes.details}>
           <Typography variant="body2" color="textSecondary" component="h2">{post.tags.map((tag) => `#${tag} `)}</Typography>
         </div>
-        <Typography className={classes.title} gutterBottom variant="h5" component="h2">{post.title}</Typography>
+        <Typography ml={2} className={classes.body} gutterBottom variant="body1" component="h2">published by : {post.name}</Typography>
+        <Typography className={classes.body} gutterBottom variant="body1" component="h2">price : {post.price}</Typography>
+        <Typography className={classes.body} gutterBottom variant="body1" component="h2">mobile : {post.mobile}</Typography>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">{post.message.split(' ').splice(0, 20).join(' ')}...</Typography>
         </CardContent>

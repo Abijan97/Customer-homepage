@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
+import { AppBar, Typography, Toolbar, Avatar, Button, Grid } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
@@ -42,8 +42,9 @@ const Navbar = () => {
         <img component={Link} to="/" src={memoriesText} alt="icon" height="45px" />
         <img className={classes.image} src={memoriesLogo} alt="icon" height="40px" />
       </Link>
+      <Button className={classes.contact} component={Link} to="/contact" color="primary">contact</Button>
       <Toolbar className={classes.toolbar}>
-      <Button component={Link} to="/contact" color="primary">contact</Button>
+     
         {user?.result ? (
           <div className={classes.profile}>
             <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
@@ -53,8 +54,12 @@ const Navbar = () => {
         ) : (
           <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
         )}
+        
       </Toolbar>
+ 
     </AppBar>
+ 
+    
   );
 };
 

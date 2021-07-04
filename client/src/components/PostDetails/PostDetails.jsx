@@ -44,10 +44,15 @@ const Post = () => {
       <div className={classes.card}>
         <div className={classes.section}>
           <Typography variant="h3" component="h2">{post.title}</Typography>
+          <Typography variant="h5" >{post.year}</Typography>
+          
           <Typography gutterBottom variant="h6" color="textSecondary" component="h2">{post.tags.map((tag) => `#${tag} `)}</Typography>
-          <Typography gutterBottom variant="body1" component="p">{post.message}</Typography>
+         
           <Typography variant="h6">Created by: {post.name}</Typography>
+          
           <Typography variant="body1">{moment(post.createdAt).fromNow()}</Typography>
+          <box mt={10}><Typography m={10} variant="h4">Price :Rs.{post.price}</Typography></box>
+          <Typography gutterBottom variant="body1" component="p">Details : {post.message}</Typography>
           <Divider style={{ margin: '20px 0' }} />
           {/* <Typography variant="body1"><strong>Realtime Chat - coming soon!</strong></Typography> */}
           <Divider style={{ margin: '20px 0' }} />
