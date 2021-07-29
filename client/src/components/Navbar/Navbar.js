@@ -43,6 +43,7 @@ const Navbar = () => {
         <img className={classes.image} src={memoriesLogo} alt="icon" height="40px" />
       </Link>
       <Button className={classes.contact} component={Link} to="/contact" color="primary">contact</Button>
+      <Button className={classes.contact} component={Link} to="/vehicles" color="primary">Vehicles</Button>
       <Toolbar className={classes.toolbar}>
      
         {user?.result ? (

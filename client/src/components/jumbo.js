@@ -23,9 +23,9 @@ class Jumbo extends Component {
                         <div className="row row-header">
                             <div className="col-12 col-sm-6">
                                 <h1>CS CAR SALES</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a neque lacinia, volutpat nunc sed, vehicula ipsum. Phasellus gravida euismod ert. felis commodo scelerisque sit amet ut mi. Proin ultricies interdum felis, sed varius ex interdum in. Quisque vel erat in justo laoreet luctus. Duis neque justo, fermentum sed justo non, viverra egestas augue. Sed in mi bibendum, elementum tellus eu, consequat ipsum.
+                                <p>C.S car sales is a pioneer in the automotive industry and has been a trusted supplier of brand new and reconditioned vehicles since 1977. We are now a second generation business with 45 years of experience in the industry. Our brand new and pre-owned vehciles range from a variety of hatchbacks, sedans, SUV’s, van’s and trucks. These vehicles travel across the world from our trusted supplies in Asia and Europe to reach the hands of our clients.
+                        </p>
 
-</p>
                             </div>
                             <div className="col-12 col-sm-6">
                             

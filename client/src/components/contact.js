@@ -1,5 +1,7 @@
 
+import { Link } from '@material-ui/core';
 import React, { Component } from 'react';
+import SimpleMap from './googlemap';
 import { Breadcrumb, BreadcrumbItem,
             Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
             
@@ -45,7 +47,9 @@ class Contact extends Component {
 
     render(){
     return(
-        <div className="container bg-light p-5 shadow-lg rounded">
+        
+        <div className="container p-5 shadow-lg rounded" style={{backgroundColor:"#ffcc80"}}>
+
             <div className="row ">
                 
 
@@ -93,7 +97,9 @@ class Contact extends Component {
             </div>
             <div className=" col-sm-6 ">
                     <h5>Map of our Location</h5>
+                    <SimpleMap/>
                 </div>
+    
                 </div>
 
             <br></br>
@@ -178,6 +184,9 @@ class Contact extends Component {
                                     <Button type="submit" color="primary">
                                         Send Feedback
                                     </Button>
+                                    <Link to="http://localhost/chatapp/users.php" className="btn btn-primary">
+                                        Live Chat
+                                    </Link>
                                 </Col>
                             </FormGroup>
                         </Form>

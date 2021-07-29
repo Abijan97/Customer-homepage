@@ -9,6 +9,7 @@ import Auth from './components/Auth/Auth';
 import Contact from './components/contact';
 import Jumbo from './components/jumbo';
 import Footer from './components/footer';
+import VehicleCard from './components/Vehicles/view-vehicle.component';
 
 const App = () => {
   const user = JSON.parse(localStorage.getItem('profile'));
@@ -24,6 +25,8 @@ const App = () => {
           <Route path="/contact" exact component={Contact}/>
           <Route path="/posts/search" exact component={Home} />
           <Route path="/posts/:id" exact component={PostDetails} />
+          <Route path="/vehicles" exact component={VehicleCard} />
+
           <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/posts" />)} />
         </Switch>
         <Footer/>
